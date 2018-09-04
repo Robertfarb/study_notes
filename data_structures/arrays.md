@@ -40,6 +40,8 @@
 
 ## Time complexity of Ruby's built-in Array Methods
   * []
+    * O(1)
   * delete
+    * O(n)
   * push
   * inject
