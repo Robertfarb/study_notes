@@ -9,6 +9,7 @@
   * O(1) insertion time
   * O(1) lookup time
   * Limited to getting, setting, cannot change it's length
+  * We must use Ruby's built in Array as the base data structure for the static array since we don't have a direct way of accessing / allocating spots of memory with ruby
 ## Dynamic Array
   * Dynamic refers to the fact that our array resizes dynamically based on the available space
   * #find runs in constant time 
@@ -29,6 +30,7 @@
   * Ring buffer allows us to shift / unshift in totally O(1) constant time
   * We keep track of the start index in a ring buffer so we know where the values of concern begin
     * e.g. `[_, _, 1, 2, 3, 4]` start_idx = 2 
+  * Since the first element in our ring buffer isn't always going to eb at index 0, we need to account for the changing start index value
   
 ## Queue with Max
   
