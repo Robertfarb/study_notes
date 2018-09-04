@@ -32,6 +32,7 @@
     * e.g. `[_, _, 1, 2, 3, 4]` start_idx = 2 
   * Since the first element in our ring buffer isn't always going to eb at index 0, we need to account for the changing start index value
   * To index into the Ring buffer, we use this equation: `store[(start_idx + index) % capacity]`
+  * In a Ring Buffer unshift we resize if length == capacity, reset the start index, and add 1 to self.length
   
 ## Queue with Max
   
