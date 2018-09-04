@@ -10,10 +10,15 @@
   * O(1) lookup time
   * Limited to getting, setting, cannot change it's length
 ## Dynamic Array
+  * Dynamic refers to the fact that our array resizes dynamically based on the available space
+  * #find runs in constant time 
+  * #delete runs in O(n) time
   * The array that we know and love with useful methods (build off of the low-level static array)
   * Push / Pop in O(n) time (worst case)
   * Push / Pop in O(1) time (best case)
   * Shift / Unshift 
+  * In order to resize the array to allow room for incoming elements:
+    * When we run out of space (allocated memory is too small) we will double the size of the current array, and copy over the elements currently stored in the array. This will be expensive upfront, but give us n free insertions moving forward.
 ## Ring Buffer
   * Ring buffers turn a static array into a ring  
   * Mod by the capacity of a dynamic array to turn it into a ring buffer
@@ -24,3 +29,9 @@
   * Ring buffer allows us to shift / unshift in totally O(1) constant time
   
 ## Queue with Max
+
+## Time complexity of Ruby's built-in Array Methods
+  * []
+  * delete
+  * push
+  * inject
