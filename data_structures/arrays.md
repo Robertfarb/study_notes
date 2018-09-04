@@ -31,6 +31,12 @@
     * e.g. `[_, _, 1, 2, 3, 4]` start_idx = 2 
   
 ## Queue with Max
+  
+  * A queue with max uses a RingBuffer as it's `@store`
+  * This data structure holds a `@max_array` which contains a running list of the current max value
+  in the Queue, in O(1) time.
+  * Available methods to Queue with Max:
+    * `#enqueue, #dequeue, #max`
 
 ## Time complexity of Ruby's built-in Array Methods
   * []
