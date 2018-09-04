@@ -27,6 +27,8 @@
     * mod by the capacity to wrap our dynamic array.
     * Physical index is used in a static array and logical index is used in a dynamic array
   * Ring buffer allows us to shift / unshift in totally O(1) constant time
+  * We keep track of the start index in a ring buffer so we know where the values of concern begin
+    * e.g. `[_, _, 1, 2, 3, 4]` start_idx = 2 
   
 ## Queue with Max
 
