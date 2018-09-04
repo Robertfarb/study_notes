@@ -31,6 +31,7 @@
   * We keep track of the start index in a ring buffer so we know where the values of concern begin
     * e.g. `[_, _, 1, 2, 3, 4]` start_idx = 2 
   * Since the first element in our ring buffer isn't always going to eb at index 0, we need to account for the changing start index value
+  * To index into the Ring buffer, we use this equation: `store[(start_idx + index) % capacity]`
   
 ## Queue with Max
   
