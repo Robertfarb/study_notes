@@ -8,7 +8,6 @@
   * Can store any data type in our hash set now that we have our hashing functions
   * Hash every time before performing any operation on values we put into our Set
   * Slight improvement to the ResizingIntSet
-  * When we get an int back we can modulo by num_buckets to determine which bucket the integet should go in
+  * When we get an int back we can modulo by num_buckets to determine which bucket the integer should go in
   * We'll create a hashMap but first we must create a subordinate, underlying data structures
 
-  
