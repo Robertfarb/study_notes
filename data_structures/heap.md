@@ -10,7 +10,12 @@
 
 We're going to use a heap to implement this priority queue
 ## Heap
+* A heap is simply a binary tree that follows a certain set of rules
 * Heap's are so intertwined with a priority queue, that some people use them interchangeably.
 * Most use cases for heaps are priority queues
 * Heaps are also used in heap sorts
 * Heaps will have three methods we're concerned with
+  * `#peek` this will return the current smallest integer in our data structure (O(1) time)
+  * `#insert(el)` this must place an element at it's appropriate space in the heap in better than O(n) time
+  * `#extract, #pop` returns the minimum value in our data structure, but also removecs it from the data structure entirely 
+* ![Heap]('./img/1200px-Max-Heap.svg.png')
