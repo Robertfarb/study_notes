@@ -13,7 +13,7 @@ We're going to use a heap to implement the priority queue
 * A heap is simply a binary tree that follows a certain set of rules:
   * A Heap must be a __complete tree__
     * filled from left to right on the bottom row...
-  * **Heap Property**: any node's must be greater than or equal to it's parent node
+  * **Heap Property**: any node must be greater than or equal to it's parent node
 * Heap's are so intertwined with a priority queue, that some people use them interchangeably.
 * Most use cases for heaps are priority queues
 * Heaps are also used in heap sort  
@@ -30,6 +30,11 @@ We're going to use a heap to implement the priority queue
 * completeness in a heap: filling in nodes from top to bottom, left to right
   * in a comlpete tree, we have to add the new node at the lowermost left position (in the above example it would have to be the left child of 3)
 
+## Heapify Up
+* Check parent node, and see if we should swap with the parent (if the parent is greater than itself swap...)
+* O(logn) time complexity
+* Log(n) as the input size doubles, number of operations increases linearly
+
 ## Implementation of Heaps
 * Formula for determining array indices of each node's children
 * (2i + 1)
@@ -43,5 +48,3 @@ Naive Solution:
 * The naive solution will always run in O(nlogn) time
 * step 1: `Heapify`
   * go through the list and for each element we add it to a heap
-  * 
-
