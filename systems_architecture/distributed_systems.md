@@ -30,6 +30,8 @@
     * When using the architecture described above, the user only talks with one computer which we call the load balancer
       * The load balancer is configured to talk to all of the machines running rails
       * When a request comes in from a user, the load balancer just has to copy in the incoming HTTP requests and send them to a randomly selected rails machine.
-      
+  * Load balancers can handle failure and will be able to only send requests to the working machines
+  * When using load balancing architecture no one machine is a single point of failure
+
     
     
