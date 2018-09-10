@@ -6,3 +6,4 @@
   * Postgres server is a server ecause it is called to set up and receive requests from our Rails Application (or the same machine)
   * When we're set up using one remote computer through AWS, it's definitely not a scalable for millions of users
     * Horizontally scaling (add many machines to split the work of many incoming loads)
+    * Vertical scaling (improve the machine that takes the HTTP requests and making it faster to be able to handle higher loads)
