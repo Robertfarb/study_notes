@@ -13,3 +13,6 @@ if el is less start traversing the left and check each next node accordingly
   2) If a node has only one child, delete it and promote its child to take its place.
   3) If a node has two children, find the largest node in its left subtree and promote that node to replace the deleted node. 
      * If necessary, promote that node's child to replace its parent.
+
+## BST Review
+*
