@@ -43,4 +43,5 @@
     * Solution to optimize writes: Split the database into thirds
       * each machine will be the leader of it's shard of the full DB
   * Databases are able to handle many requests in paralell and process many transactions in parallel, but not accept conflicting transactions
+  * If the current leader fails, the 
   
