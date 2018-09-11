@@ -18,3 +18,7 @@
 ### Twitter Graph
 * Vertices: one for each user
 * Edges: A -> B if a is following B
+
+## The DOM is an example of a graph
+* vertices: DOM Elements
+* Edges: parents, chidlren
