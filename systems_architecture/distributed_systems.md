@@ -35,3 +35,12 @@
 
 ## Distributed Databases
   * most applications are very read heavy, and have fewer updates
+  * Leader / follower
+    * we can only read from the leader database, and all the writes can be commited to the leader or any follower
+    * Writes are submitted to the leader, and the leader forwards the writes on to the followers, and they make the changes, keeping themselves up to date
+    * Synchronous replication (another way to refer to the le ader / follower setup)
+    * Every write eventually ends up in every other database (not only the leader)
+    * Solution to optimize writes: Split the database into thirds
+      * each machine will be the leader of it's shard of the full DB
+  * Databases are able to handle many requests in paralell and process many transactions in parallel, but not accept conflicting transactions
+  
