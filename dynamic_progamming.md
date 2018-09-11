@@ -29,6 +29,7 @@
       end
     end
     ````
-  ## Longest Increasing Subsequence
-  * given an array of integers find the length of the longest increasing subsequence (they don't need to be in order)
+  ## The Burglar Problem
+  * take in an array, and as a burglar we can rob any house in the neighborhood, except the ones that are adjacent to eachother
+  * 
     
