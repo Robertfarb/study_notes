@@ -28,3 +28,7 @@
 ##RSUs
 * Restricted Stock units
 
+## Investing
+ * Opening an acount on Vanguard (brokerage firm) (mutual firm)
+ * Invest in target funds
+ * Robinhood
