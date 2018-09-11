@@ -33,5 +33,5 @@
   * Load balancers can handle failure and will be able to only send requests to the working machines
   * When using load balancing architecture no one machine is a single point of failure
 
-    
-    
+## Distributed Databases
+  * most applications are very read heavy, and have fewer updates
