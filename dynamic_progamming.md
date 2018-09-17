@@ -38,5 +38,3 @@
     function makes a copy of the parameter and refers to and mutates that copy.
 ## The Burglar Problem
   * take in an array, and as a burglar we can rob any house in the neighborhood, except the ones that are adjacent to eachother
-
-    
