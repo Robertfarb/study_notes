@@ -10,8 +10,14 @@
 
 ### `PUT`:  
   * a put request is used to update / replace an entry
-  *  `PUT` is most often used for **update**
+  * `PUT` is most often used for **update**
+  * `POST` is an alternative that we can use instead of PUT  to create new resources and provide the client-defined id in the body representation
 
-### `PATCH`: a Patch request is commonly used to modify the collection itself  
+### `PATCH`: 
+  * `PATCH` is used for modify capabilities.
+  * Patch request only needs to contain the changes to the resource, not the complete resources
+  * Patch resembles PUT but the body contains a set of instructions describing how the resource currently living on the server should be modified to produce a new version
 
-### `DELETE`: Del
+### `DELETE`:
+  * `DELETE` is easy to understand and is used to **delete** a resource identified by a URI
+  * **URI**: Uniform resource identifier
