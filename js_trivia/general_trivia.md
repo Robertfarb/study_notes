@@ -17,4 +17,26 @@
 
 * What is page `reflow`  
   * `reflow` is the computation of element's position and geometry in the DOM, using document fragments could result in reduction in reflow and better overall performance.
-  
+  ```js
+    var element  = document.getElementById('ul'); // assuming ul exists
+    var fragment = document.createDocumentFragment();
+    var browsers = ['Firefox', 'Chrome', 'Opera', 
+        'Safari', 'Internet Explorer'];
+
+    browsers.forEach(function(browser) {
+        var li = document.createElement('li');
+        li.textContent = browser;
+        fragment.appendChild(li);
+    });
+
+    element.appendChild(fragment);
+    ```
+* Primitive datatype in JavaScript  
+  * A primitive datatype is not an object, it's immutable, and has no attributes / methods defined directly on it
+  * e.g: Number, String, Null
+
+
+* Is null an object?
+  * NO.
+  * typeof null returns object, but that is a bug in JS...
+  * Null is a primitive datatype
