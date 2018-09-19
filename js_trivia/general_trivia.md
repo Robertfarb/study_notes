@@ -40,3 +40,10 @@
   * NO.
   * typeof null returns object, but that is a bug in JS...
   * Null is a primitive datatype
+
+* Are let and const hoisted?  
+  * yes
+
+* Which happens first: document.onload or window.onload?  
+  * document.onload
+
