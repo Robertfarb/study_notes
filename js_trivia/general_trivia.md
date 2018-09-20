@@ -53,4 +53,10 @@
   3) Symbol
   4) Undefined
   5) Null
-  6) Boolean 
+  6) Boolean
+
+* Value of `this` inside of a setTimeout function?
+  * The window
+
+
+
