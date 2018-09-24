@@ -48,3 +48,21 @@ for (var i = 0; i < 3; i++) {
       }
     }
   ```
+
+### How would you use a closure to create a private counter?
+ * Create a function within an outer function that allows you to update a private variable but the variable wouldn't be accessible from outside the function without the use of a helper function
+ ```js
+  function counter() {
+    let _counter = 0;
+    
+    return {
+      add: function(incVal) {_counter += incVal},
+      retrieve: function() {return `the counter is currently at ${_counter}`}
+    }
+  }
+
+  var c = counter();
+  c.add(5); 
+  c.add(9);
+  c.retreive();
+ ```
