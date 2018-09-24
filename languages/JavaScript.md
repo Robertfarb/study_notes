@@ -32,3 +32,19 @@ for (var i = 0; i < 3; i++) {
   }
   ```
   * in the above solution we immediately invoke an anonymous function by passing it (i), as an argument i_local. This will correctly alert 0 after 1 second, 1 after
+
+  ### Write a function that would allow you to do this 
+  
+  ```js
+    var addSix = createBase(6);
+    addSix(10); // returns 16
+    addSix(21); // returns 27
+  ```
+
+  ```js
+    function createBase(base) {
+      return function (num) {
+        return num + base;
+      }
+    }
+  ```
