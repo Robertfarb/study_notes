@@ -12,11 +12,12 @@ setTimeout(function() {
 * Why:
   * The setTimeout function creates a function (the closure) that has access to its outer scope, which is the loop that contains the index i. After 3 seconds go by, the function is executed and it printsd out the value of I which ends up being 4 (4 is out of scope in this array.)
 
-###  Goal of the code is to output 1, 2, and 3 after 1.1, 1.2, and 1.3 seconds respectively
+###  Goal of the code is to alert numbers 0, 1, and 2 after 1, 1.1, and 1.2 seconds respectively
 
 ```js
 for (var i = 0; i < 3; i++) {
   setTimeout(function() { alert(i); }, 1000 + i);
 }
 ```
-* Wll this do it ? why or why not
+* Will this do it? why or why not
+  * No, it will not due to JS closures. It will actually alert 3, 3 times after 1, 1.1, and 1.2 seconds
