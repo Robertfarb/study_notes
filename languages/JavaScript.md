@@ -20,4 +20,7 @@ for (var i = 0; i < 3; i++) {
 }
 ```
 * Will this do it? why or why not
-  * No, it will not due to JS closures. It will actually alert 3, 3 times after 1, 1.1, and 1.2 seconds
+  * No, it will not due to JS closures. It will actually alert 3, 3 times after 1, 1.1, and 1.2 seconds because of JS closures.
+  * A JS closure is when an inner function has access to it's outer enclosing function's variables and properties.
+  * The variable i is declared outside of the setTimeout function, in the for loop. so when the for loop is done running, each of the inner functions refers to the same variable i, which is 3.
+* Solution is to use an `IIFE`, or an immediiately invoked function expression
