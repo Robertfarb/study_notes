@@ -11,19 +11,30 @@
     <h1>JavaScript Select All Challenge!</h1>
     <form class="city-boxes" action="">
       <label for="select-all">Select All</label>
-      <input id="select-all" type="checkbox">
+      <input onClick="" id="select-all" type="checkbox">
 
       <label for="la">Los Angeles</label>
-      <input id="la" type="checkbox">
+      <input onClick="toggle()" class="city" id="la" type="checkbox">
 
       <label for="sf">San Francisco</label>
-      <input id="sf" type="checkbox">
+      <input onClick="toggle()" class="city" id="sf" type="checkbox">
 
       <label for="ny">New York</label>
-      <input id="ny" type="checkbox">
+      <input onClick="toggle()" class="city" id="ny" type="checkbox">
 
       <label for="mh">Manhattan Beach</label>
-      <input id="mh" type="checkbox">
+      <input onClick="toggle()" class="city" id="mh" type="checkbox">
     </form>
+
+    <script>
+      let selectAll = document.getElementById("select-all");
+      let checkBoxes = document.querySelectorAll(".class");
+      
+      let toggle = () => {
+        if (selectAll.checked == true) {
+          selectAll.checked = false;
+        }      
+      }
+    </script>
   </body>
 </html>
