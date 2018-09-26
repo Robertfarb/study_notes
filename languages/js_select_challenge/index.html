@@ -11,7 +11,7 @@
     <h1>JavaScript Select All Challenge!</h1>
     <form class="city-boxes" action="">
       <label for="select-all">Select All</label>
-      <input onClick="" id="select-all" type="checkbox">
+      <input onClick="selectAllBoxes()" id="select-all" type="checkbox">
 
       <label for="la">Los Angeles</label>
       <input onClick="toggle()" class="city" id="la" type="checkbox">
@@ -28,13 +28,22 @@
 
     <script>
       let selectAll = document.getElementById("select-all");
-      let checkBoxes = document.querySelectorAll(".class");
+      let checkBoxes = document.querySelectorAll(".city");
       
       let toggle = () => {
         if (selectAll.checked == true) {
           selectAll.checked = false;
         }      
       }
+
+      let selectAllBoxes = () => {
+        checkBoxes.forEach(checkBox => {
+          console.log(checkBox)
+          if (checkBox.checked === false ) {
+            checkBox.checked = true;
+          }
+        })
+      };
     </script>
   </body>
 </html>
