@@ -1,5 +1,6 @@
 ## Graphs
 * Graphs have vertices (dots) and Edges (lines)
+* In order to be a graph, it must contain at least one vertex
 * Edges can have direction and weight
 * Directed Graph: 
   * Every single edge must be directed
@@ -14,6 +15,13 @@
 * |E| = num of edges on a graph
 * density of a graph
   * |E| / (|V| * (|V| - 1))
+
+## Directed Graph
+  * All of the edges in the graph are directed
+
+## Un-directed graph
+ * All of the edges in the graph are undirected
+ 
 
 ### Twitter Graph
 * Vertices: one for each user
