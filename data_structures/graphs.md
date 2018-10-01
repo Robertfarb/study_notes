@@ -21,7 +21,7 @@
 
 ## Un-directed graph
  * All of the edges in the graph are undirected
- 
+
 
 ### Twitter Graph
 * Vertices: one for each user
