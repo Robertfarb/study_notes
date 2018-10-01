@@ -1,3 +1,7 @@
+#JavaScript  
+* [Tricky JS Closure Questions](#tricky-js-closure-questions)
+* [Prototype](#prototype)
+
 ## Tricky JS Closure Questions
 ```js
 // interviewer: what will the following code output?
@@ -66,3 +70,5 @@ for (var i = 0; i < 3; i++) {
   c.add(9);
   c.retreive();
  ```
+
+ ## Prototype
