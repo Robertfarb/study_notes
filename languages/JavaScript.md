@@ -72,3 +72,7 @@ for (var i = 0; i < 3; i++) {
  ```
 
  ## Prototype
+  * JavaScript has had prototypal inheritance from the very beginning. The antiquated way
+  to set the prototype of an object would be to use a "prototype" property of the constructor function of an object
+  * When a new object is created using `new Obj ()` that objects prototype is set to Obj.prototype
+  * The default "prototype" for JS functions is an object with the property constructor that points back to the function itself.
