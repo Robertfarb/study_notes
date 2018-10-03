@@ -85,4 +85,27 @@
 * Reference vs. Value
   * Simple values (primitives) are always assigned by value-copy
   * Compound values always create a copy of the rerference on assignment: objects, arrays, functions
+  e.g.:
+  ```js
+    var a = 2         // 'a' hold a copy of the value 2.
+    var b = a;        // 'b' is always a copy of the value in 'a'
+    b++;
+    console.log(a);   // 2
+    console.log(b);   // 3
+    var c = [1,2,3];
+    var d = c;        // 'd' is a reference to the shared value
+    d.push( 4 );      // Mutates the referenced value (object)
+    console.log(c);   // [1,2,3,4]
+    console.log(d);   // [1,2,3,4]
+    /* Compound values are equal by reference */
+    var e = [1,2,3,4];
+  ```
 
+* `Explain Scope`
+  * Scope refers to the execution context. It defines the accessibility of variales and functions in the code
+  * `Global Scope`: The outermost scope. Variables declared outside a function are in the global scope and can be accessed in any other scope. In a browser, the window object is the global scope
+  * `Local Scope`: A scope nested inside another function scope. Variables declared in a local scope are accessible within this scope as well as in any inner scopes.
+
+* Explain Hoisting
+  * The behavior of "moving" var and function declarations to the top of their respective scopes during the compilation phase is called `hoisting`
+  * Function declarations are completeley hoisted in JS meaning that a declared function can be called before it is defined.
