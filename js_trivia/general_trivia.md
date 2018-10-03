@@ -47,13 +47,14 @@
 * Which happens first: document.onload or window.onload?  
   * document.onload
 
-* 6 primitive datatypes in JS:  
+* 7 primitive datatypes in JS:  
   1) Number
   2) String
   3) Symbol
   4) Undefined
   5) Null
   6) Boolean
+  7) Object
 
 * Value of `this` inside of a setTimeout function?
   * The window

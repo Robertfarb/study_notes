@@ -1,6 +1,7 @@
 #JavaScript  
 * [Tricky JS Closure Questions](#tricky-js-closure-questions)
 * [Prototype](#prototype)
+* [Prototypal Inheritance](#prototypal-inheritance-review)
 
 ## Tricky JS Closure Questions
 ```js
@@ -76,3 +77,38 @@ for (var i = 0; i < 3; i++) {
   to set the prototype of an object would be to use a "prototype" property of the constructor function of an object
   * When a new object is created using `new Obj ()` that objects prototype is set to Obj.prototype
   * The default "prototype" for JS functions is an object with the property constructor that points back to the function itself.
+  * Object.prototype is not the same as [[Prototype]]. The only thing Object.prototype does is sets the [[Prototype]] of new objects when new Object() is called.d
+  ``` js
+  function Animal(type) {
+    this.type = type;
+  }
+
+  function Dog(name) {
+    this.name = name;
+  }
+
+  const Stella = new Dog("Stella");
+  ```
+  * In the case above, `Animal` is the constructor function
+    * Stella's `__proto__ `references Animal.prototype
+  * It is possible to change the prototype of an object using `setPrototypeOf(Dog.prototype, Animal.prototype)`
+
+  ### Prototypal Inheritance Review
+  ```js
+  function Cat(name) {
+    this.name = name;
+  }
+
+  Cat.prototype.meow = function () {
+    console.log(`${this.name} says meow!`)
+  }
+
+  let linux = new Cat("linux");
+  linux.meow();
+  ```
+
+  * Cat is the constructor function that, when called, will create a new object.
+  * A Prototype is a just an object that is a property of the constructor function
+  * When we make a new instance of Cat, we run the constructor function
+  * When we call linux.meow() it's going to look in it's own object and see if it has a function defined on itself... if not it will go up to it's prototype and look for that function and continue up until there is nothing else on the chain.
+  * __proto__ points to the prototype that the constructor function points to. 
