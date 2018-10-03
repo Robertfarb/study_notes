@@ -64,9 +64,25 @@
   * `Undefined` is the absence of a definition. It is used as the default value for intializing variables, function arguments that were not provided and missing properties of objects. Functions return undefined when nothing has been explicitly returned.
   * `Null` is the absence of a value, It is an assignment value that can be assigned to a variable as a representation of 'no-value'
 
+* Are empty arrays true or false in JS?
+  * True
 
 
+* == vs. ===
+  * == checks for equality `with coercion` and === checks for equality without coercion... strictly equality
 
+* Tricky Comparisons
+  * false == ""  // true
+  * false == []  // true
+  * false == {}  // false
+  * "" == 0      // true
+  * "" == []     // true
+  * "" == {}     // false
+  * 0 == []      // true
+  * 0 == {}      // false
+  * 0 == null    // false
 
-
+* Reference vs. Value
+  * Simple values (primitives) are always assigned by value-copy
+  * Compound values always create a copy of the rerference on assignment: objects, arrays, functions
 
