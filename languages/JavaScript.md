@@ -15,7 +15,7 @@ setTimeout(function() {
 ```
 * Answer: Index: 4, element: undefined (printed 4 times)
 * Why:
-  * The setTimeout function creates a function (the closure) that has access to its outer scope, which is the loop that contains the index i. After 3 seconds go by, the function is executed and it printsd out the value of I which ends up being 4 (4 is out of scope in this array.)
+  * The setTimeout function creates a function (the closure) that has access to its outer scope, which is the loop that contains the index i. After 3 seconds go by, the function is executed and it prints out the value of I which ends up being 4 (4 is out of scope in this array.)
 
 ###  Goal of the code is to alert numbers 0 after 1, 1 after 1.1 seconds and 2 , after 1.2 seconds respectively
 

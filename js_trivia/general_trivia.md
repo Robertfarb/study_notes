@@ -109,3 +109,27 @@
 * Explain Hoisting
   * The behavior of "moving" var and function declarations to the top of their respective scopes during the compilation phase is called `hoisting`
   * Function declarations are completeley hoisted in JS meaning that a declared function can be called before it is defined.
+  * let and const are NOT hoisted
+
+* Function expression vs. function declaration
+  * function expression:
+  ```js
+  let sum = function(a, b) {
+    return a + b;
+  }
+  ```
+  * function declaration:
+  ```js
+  function sum(a, b) {
+    return a + b;
+  }
+  ```
+  * function expression is NOT hoisted
+  * function declaration IS hoisted
+
+  * Closures in JavaScript
+    * A closure is the combination of a function and the lexical environment from which it was declared. Closure allows a function to access variables from an enclosing scope - `environment` - even after it leaves the scope in which it was declared
+    * JavaScript closures refer to variables in the outer scope
+    * Closures can refer to outer scope variables even after the outer function has returned.
+    * One main benefit of closures is that it allows `data encapsulation`. This refers to the ideas that some data should not be directly exposed.
+    
