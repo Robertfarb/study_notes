@@ -11,4 +11,4 @@
   * Step 1) Visit first vertex, and push it onto the result
   * Step 2) Visit vertex B, add it to result and push it onto the queue, but `stay at vertex A`
   * Step 3) Once there are no more Vertices to visit when on a current vertex, Dequeue that vertex and move onto the next unvisted vertex.
-  * Step 4) Continue until all vertices are visited. 
+  * Step 4) Continue until all vertices are visited.
