@@ -16,3 +16,8 @@
   * Only special functions can change the state
   * A user interaction triggers these special state changing functions
   Only one change takes place at a  time. 
+
+## Methods offered on the store in Redux
+  * getState()
+  * dispatch()
+  * subscribe()
