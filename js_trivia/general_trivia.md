@@ -132,4 +132,12 @@
     * JavaScript closures refer to variables in the outer scope
     * Closures can refer to outer scope variables even after the outer function has returned.
     * One main benefit of closures is that it allows `data encapsulation`. This refers to the ideas that some data should not be directly exposed.
-    
+
+  * What does the new keyword do in JavaScript?
+    * The `new` keyword invokes a constructor function, in turn creating a new Object.
+    * In depth:  
+        1) Creates a new object
+        2) Sets the object's prototype to be the prototype of the `constructor function`
+        3) Executes the constructor function with this as the newly created object
+        4) Returns the created object. If the constructor returns an object, this object is returned.
+    * Calling a constructor function without the new keyword does not actually create a new object in JS.
