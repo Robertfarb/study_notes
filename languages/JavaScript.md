@@ -2,6 +2,7 @@
 * [Tricky JS Closure Questions](#tricky-js-closure-questions)
 * [Prototype](#prototype)
 * [Prototypal Inheritance](#prototypal-inheritance-review)
+* [ES5 v. ES6](#es5-v-es6)
 
 ## Tricky JS Closure Questions
 ```js
@@ -112,3 +113,17 @@ for (var i = 0; i < 3; i++) {
   * When we make a new instance of Cat, we run the constructor function
   * When we call linux.meow() it's going to look in it's own object and see if it has a function defined on itself... if not it will go up to it's prototype and look for that function and continue up until there is nothing else on the chain.
   * __proto__ points to the prototype that the constructor function points to. 
+
+  ## ES5 v. ES6
+  
+  ### ES6 Block Scope
+    * ES5 only had function level scope. ES6 provides "block" level scoping when we use let or const instead of var
+    * ES6 doesn’t allow duplicate declaration of variables when we declare them using “let” or “const” in the same scope. This is very helpful in avoiding duplicate function expressions coming from different libraries
+  
+  ### IIFE
+    * ES6 eliminates the need for IIFE
+
+  ### Fat arrow functions maintain the context of "this"
+    * in ES5 "this" can vary based on "where" it is called and how it is called.
+    * in ES6 lexical this forces the variable this to always point to the object where it is physcially located.
+    
