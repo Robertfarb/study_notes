@@ -14,6 +14,8 @@ We're going to use a heap to implement the priority queue
   * A Heap must be a __complete tree__
     * filled from left to right on the bottom row...
   * **Heap Property**: any node must be greater than or equal to it's parent node
+* `Min-heap`: Every single parent node (including the root node) is less than or equal to the value of it's children nodes
+* `Max-Heap`: Every single parent node (including the root) is greater than or equal to it's children nodes.
 * Heap's are so intertwined with a priority queue, that some people use them interchangeably.
 * Most use cases for heaps are priority queues
 * Heaps are also used in heap sort  
