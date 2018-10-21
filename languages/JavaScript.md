@@ -3,6 +3,7 @@
 * [Prototype](#prototype)
 * [Prototypal Inheritance](#prototypal-inheritance-review)
 * [ES5 v. ES6](#es5-v-es6)
+* [Function Expression v. Function Declaration](#function-expression-v-function-declaration)
 
 ## Tricky JS Closure Questions
 ```js
@@ -73,7 +74,7 @@ for (var i = 0; i < 3; i++) {
   c.retreive();
  ```
 
- ## Prototype
+ ## `Prototype`
   * JavaScript has had prototypal inheritance from the very beginning. The antiquated way
   to set the prototype of an object would be to use a "prototype" property of the constructor function of an object
   * When a new object is created using `new Obj ()` that objects prototype is set to Obj.prototype
@@ -114,16 +115,33 @@ for (var i = 0; i < 3; i++) {
   * When we call linux.meow() it's going to look in it's own object and see if it has a function defined on itself... if not it will go up to it's prototype and look for that function and continue up until there is nothing else on the chain.
   * __proto__ points to the prototype that the constructor function points to. 
 
-  ## ES5 v. ES6
-  
+## `ES5 v. ES6`
   ### ES6 Block Scope
-    * ES5 only had function level scope. ES6 provides "block" level scoping when we use let or const instead of var
-    * ES6 doesn’t allow duplicate declaration of variables when we declare them using “let” or “const” in the same scope. This is very helpful in avoiding duplicate function expressions coming from different libraries
+  * ES5 only had function level scope. ES6 provides "block" level scoping when we use let or const instead of var
+  * ES6 doesn’t allow duplicate declaration of variables when we declare them using “let” or “const” in the same scope. This is very helpful in avoiding duplicate function expressions coming from different libraries
   
   ### IIFE
-    * ES6 eliminates the need for IIFE
+  * ES6 eliminates the need for IIFE
 
   ### Fat arrow functions maintain the context of "this"
-    * in ES5 "this" can vary based on "where" it is called and how it is called.
-    * in ES6 lexical this forces the variable this to always point to the object where it is physcially located.
-    
+  * in ES5 "this" can vary based on "where" it is called and how it is called.
+  * in ES6 lexical this forces the variable this to always point to the object where it is physcially located.
+
+## `Function Expression v. Function Declaration`
+  * Function Expression: 
+    * A function expression is created when the execution reaches it and is useable from then on - it is not hoisted
+    * e.g: 
+    ```js
+      const sum = function(a , b) {
+        return a + b
+      }
+    ```  
+  
+  * Function Declaration:
+    * A Function Declaration can be called both before and after it was defined — it is hoisted.
+    ```js
+    function sum(a, b) {
+      return a + b;
+    }
+    ```
+  
