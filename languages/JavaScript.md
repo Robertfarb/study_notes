@@ -4,6 +4,7 @@
 * [Prototypal Inheritance](#prototypal-inheritance-review)
 * [ES5 v. ES6](#es5-v-es6)
 * [Function Expression v. Function Declaration](#function-expression-v-function-declaration)
+* [Promise Chaining](#promise-chaining)
 
 ## Tricky JS Closure Questions
 ```js
@@ -144,4 +145,9 @@ for (var i = 0; i < 3; i++) {
       return a + b;
     }
     ```
-  
+
+## Promise Chaining
+  * The main idea is to pass the result of an initial Asynchronous call in Javascript through
+  a chain of .then() function calls and do something with the result that is passed back from .then(result => doSomething(result));
+  * The initial promise resolves, then the `.then` handler is called, then the value that it returns is passed to the next .then... and so on
+  * Promise chaining works because a promise always returns a promise, so we can continually call .then on the result with no problem. 
