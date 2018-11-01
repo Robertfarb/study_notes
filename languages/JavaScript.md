@@ -186,3 +186,19 @@ for (var i = 0; i < 3; i++) {
   }
   ```
 * JavaScript automatically wraps the return value of a function in a Promise if the function does not already return a Promise.
+* Async ensures that the function returns a promise, and wraps non-promises in it. Simple enough, right? But not only that. 
+* `Await keyword`: The keyword `await` makes JavaScript wait until that promise settles and returns it's result.
+  ```js
+  async function f() {
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("done!"), 1000)
+    });
+
+    let result = await promise;
+    alert(result);
+  }
+
+  f();
+  ```
+
+
