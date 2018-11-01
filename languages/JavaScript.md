@@ -6,6 +6,7 @@
 * [Function Expression v. Function Declaration](#function-expression-v-function-declaration)
 * [Promise Chaining](#promise-chaining)
 * [Promise](#promise)
+* [Async / Await](#async-await)
 
 ## Tricky JS Closure Questions
 ```js
@@ -176,4 +177,12 @@ for (var i = 0; i < 3; i++) {
       * Promise.reject(error) – makes a rejected promise with the given error,
       * Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, then it becomes the error of Promise.all, and all other results are ignored.
       * Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
-    
+
+## Async Await
+* `Async keyword`: The word async before a function means that a function always returns a promise.
+  ```js
+  async function f() {
+    return 1;
+  }
+  ```
+* JavaScript automatically wraps the return value of a function in a Promise if the function does not already return a Promise.
