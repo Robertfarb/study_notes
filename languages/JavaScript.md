@@ -166,5 +166,14 @@ for (var i = 0; i < 3; i++) {
     * `Promise.reject()`: create a rejected promise with the error
     `let promise = Promise.reject(error)` same as 
     `let promise = new Promise((resolve, reject) => reject(error))`
-    * `Promise.all()`
-
+    * `Promise.all()`: The method to run many promises in parallel and wait until all of them are ready
+    `let promise = Promise.all(iterable)`;
+    `Promise.all(pass in multiple promises here).then(alert);`
+    * `Promise.race()`: Takes an iterable of promises, waits for the first result  (or error) then goes with it
+    `let promise = Promise.race(iterable)`
+  * 4 static methods of the Promise class:
+      * Promise.resolve(value) – makes a resolved promise with the given value,
+      * Promise.reject(error) – makes a rejected promise with the given error,
+      * Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, then it becomes the error of Promise.all, and all other results are ignored.
+      * Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
+    
