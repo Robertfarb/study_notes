@@ -200,5 +200,6 @@ for (var i = 0; i < 3; i++) {
 
   f();
   ```
+  * `await` literally makes JavaScript wait until the promise settles, and then continues on with the result.
 
 
