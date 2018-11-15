@@ -18,3 +18,8 @@ A linked list is a data strucure that consists of a series of nodes that are con
   * In a loop, find the appropriate node after which the input node is to be inserted.
     * To find the appropriate node, start from the head, and keep moving until we reach a node whose value is greater than the input node. The node just before that node is the Appropriate node at to which insert the new node.
   * Insert the input node after the appropriate node found, and prior to the greater node.
+  * `Time complexity: O(N)`
+
+### Delete a node from a linked list
+  * If the node being deleted is the first node, we copy the data of the next node to head and delete the next node. The cases whe the deleted node is not the head node can be handled by finding the previous node and changing the .next of the previous node to the .next of the node being deleted.
+  * By deleting the reference to the node, it gets garbage collected and will no longer be a part of the linked list
