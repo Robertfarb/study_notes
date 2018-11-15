@@ -1,3 +1,7 @@
+* [System Design Introduction](#system-design-introduction)
+* [Systems Design High Level Topics](#systems-design-high-level-topics)
+* [Design Twitter](#design-twitter)
+
 ## System Design Introduction
   * ABCD's: 
   * `A`sk good questions
@@ -32,5 +36,8 @@
     * distributed hashing scheme that operates independently of the number of servers or objects in a distrubited hash table by assigning them a position on an abstract circle, or hash ring. This allows servers and objects to scale without affecting the overall system.
   * Optimistic v. Pessemistic Locking
   * Relational DB v. NoSQL DB.
+
+## Design Twitter
+  * 
 
 
