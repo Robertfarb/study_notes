@@ -23,3 +23,8 @@ A linked list is a data strucure that consists of a series of nodes that are con
 ### Delete a node from a linked list
   * If the node being deleted is the first node, we copy the data of the next node to head and delete the next node. The cases whe the deleted node is not the head node can be handled by finding the previous node and changing the .next of the previous node to the .next of the node being deleted.
   * By deleting the reference to the node, it gets garbage collected and will no longer be a part of the linked list
+
+### How can we compare two strings using a Linked List?
+  * Write a function that compares two linked lists and returns 0 if both strings are the same, and 1 if the first is greater, and -1 if the second is greater.
+  * Traverse the list returning 1 if list1.next > list2.next, else return -1
+  
