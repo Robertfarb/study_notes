@@ -38,6 +38,17 @@
   * Relational DB v. NoSQL DB.
 
 ## Design Twitter
-  * 
+  * MVPS:
+    * Tweeting
+    * Timeline (see followed tweets / see your own tweets)
+    * Following
+  * What to optimize for?
+    * Many read requests to the database, but not nearly as many write requests
+    * Similar to Facebook, we care about speed (consistency)
+      * If a user tweets we care about the delivery time to other users
+    * `Eventual Consistency`
+  * Tweet
+    * Hit the send button --> POST request to API ---> REDIS database (lands in 3 REDIS machines in memory.)
+
 
 
