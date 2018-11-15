@@ -11,3 +11,10 @@ A linked list is a data strucure that consists of a series of nodes that are con
   * `#get(key)`
   * `#include?(key)`
   * `#remove(key)`
+
+### Insertion into a Linked List
+  * To insert a node into a linked list we must create a head node using the input to our function and that will be the return value
+  * If the value of the input node is smaller than the value of the headnode, then insert the node as the start and make it a new head node.
+  * In a loop, find the appropriate node after which the input node is to be inserted.
+    * To find the appropriate node, start from the head, and keep moving until we reach a node whose value is greater than the input node. The node just before that node is the Appropriate node at to which insert the new node.
+  * Insert the input node after the appropriate node found, and prior to the greater node.
