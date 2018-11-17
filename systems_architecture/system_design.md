@@ -48,7 +48,13 @@
       * If a user tweets we care about the delivery time to other users
     * `Eventual Consistency`
   * Tweet
-    * Hit the send button --> POST request to API ---> REDIS database (lands in 3 REDIS machines in memory.)
+    * Hit the send button --> POST request to API --> Load Balancer ---> REDIS datastore 
+      * The tweet will land in 3 REDIS machines in memory.
+      * The REDIS machines we use must need to have a lot of RAM / storage for optimized
+      * We will only update the timelines of users that are active recently to improve performance
+      * When one tweet gets sent out, REDIS lists for every one of that user's followers gets updated
+  
+
 
 
 
