@@ -1,5 +1,6 @@
 ## ReactJS
 * [Lifecycle Methods](#lifecycle-methods)
+* [Imperative v. Declarative](#imperative-v-declarative)
 
 ## Lifecycle Methods
 1) `componentWillMount`  
@@ -20,5 +21,8 @@
     * Executes after rendering... after the compoonents updates are flushed to the DOM
 7) `componentWillUnmount`
     * executed immediately before removing component from the DOM
+
+## Imperative v Declarative
+    * 
     
 
