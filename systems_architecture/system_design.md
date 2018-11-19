@@ -84,7 +84,21 @@
     * We need a sophisticated networking service so customer requests are distributed and routed to the correct machines.
     * `Stateless`: one request going to a service and a response is coming back... the server doesn't need to know about the state of communication with the service
       * allows you to create a service that is hosted on many different machines, without being concerned about the state of the application.
-  *  `Testing`: 
+  *  `Testing`
+    * Resiliency testing: case of failure testing
+    * `Resiliency`: 
+      * Hailstorm: Used for resilience testing... goes to a random host and shuts it down.
+      * The purpose of hailstorm failure testing is to see what the system logs, and what will happen in a failed state which allows us to plan for those failures and be prepared.
+  * `Graphs`: Uber is a graph problem
+    * A city can be modeled by edges and nodes (Graph)
+      * Intersection can be a node, and an edge can be a street between two intersections
+    * Uber uses driver location / user location and assigns a route to get from the driver to the route
+    * This routing is a complex graph problem (`Traveling salesman problem`) Finding the shortest route from one graph point to another.
+    * `NP-complete Problem` (There is no really efficient solution)
+    * Uber had one big challenge: Getting very precise ETA... how long will it take the user to get picked up by the driver.
+      * The edges of the city graph (streets) will have edge weights... The weight will determine the max speed allowed on a street.
+      * Djikstra's algorithm will favor edges with lower weights
+    
     
   
 
