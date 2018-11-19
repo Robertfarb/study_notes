@@ -72,6 +72,24 @@
       * Uber uses a mix of SQL, NOSQL databases: Cassandra, MYSQL (no-relational)
     * Uber uses Hadoop as a data warehouse, that will archive the trip storage. This is decoupled from the daily business of trip storage, and driver ratings. Hadoop is used for business analytics and larger storage needs.
   * `Caching Layer`
+  * Cluster of Kafka instances to ingest messages, and ensure they don't get lost.
+  * The Kafka cluster is periodically stored to Hadoop data warehouse.
+  * Uber / Lyft rely on SOA (Service Oriented Architecture).
+    * `Provisioning`: Putting apps (software / code) on machines that are running in different regions. 
+    * Provisioning is the step to get code from static code in repositories, onto the machines as a running service
+    * For provisioning, Uber uses a tool called Terraform
+    * `Containers`: Shielded runtime environments
+      * Docker - enterprise container platform
+  * ` Network routing`: route requests to the backend
+    * We need a sophisticated networking service so customer requests are distributed and routed to the correct machines.
+    * `Stateless`: one request going to a service and a response is coming back... the server doesn't need to know about the state of communication with the service
+      * allows you to create a service that is hosted on many different machines, without being concerned about the state of the application.
+  *  `Testing`: 
+    
+  
+
+    
+
   
 
   
