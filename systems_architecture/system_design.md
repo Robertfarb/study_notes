@@ -1,6 +1,7 @@
 * [System Design Introduction](#system-design-introduction)
 * [Systems Design High Level Topics](#systems-design-high-level-topics)
 * [Design Twitter](#design-twitter)
+* [Design Uber/Lyft](#design-uber-lyft)
 
 ## System Design Introduction
   * ABCD's: 
@@ -53,6 +54,15 @@
       * The REDIS machines we use must need to have a lot of RAM / storage for optimized
       * We will only update the timelines of users that are active recently to improve performance
       * When one tweet gets sent out, REDIS lists for every one of that user's followers gets updated
+
+## Design Uber Lyft
+  * "How would you design Uber or Lyft?
+  * `Core Features`:
+    * Finding / Matching customers to drivers
+    * Mapping / Routing
+  * `Trip Storage`
+    * We must store all trips a customer has taken
+    * We also must store all the rides a driver has provided
   
 
 
