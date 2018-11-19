@@ -63,6 +63,17 @@
   * `Trip Storage`
     * We must store all trips a customer has taken
     * We also must store all the rides a driver has provided
+    * Uber leverages Cloud platforms like AWS, but they also use their own data centers.
+    * Each trip is stored in a close data center to the location, and then 2 backup data centers as well.
+    * If a data center is offline, then Uber will store a trip in a backup datacenter, then sync datacenters.
+    * `What type of database should we use?`
+      * High availability + Low Latency --> NOSQL.
+      * So many requests and pickups happen at the same time, so we need lo latency requests.
+      * Uber uses a mix of SQL, NOSQL databases: Cassandra, MYSQL (no-relational)
+    * Uber uses Hadoop as a data warehouse, that will archive the trip storage. This is decoupled from the daily business of trip storage, and driver ratings. Hadoop is used for business analytics and larger storage needs.
+  * `Caching Layer`
+  
+
   
 
 
