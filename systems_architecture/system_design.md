@@ -98,6 +98,17 @@
     * Uber had one big challenge: Getting very precise ETA... how long will it take the user to get picked up by the driver.
       * The edges of the city graph (streets) will have edge weights... The weight will determine the max speed allowed on a street.
       * Djikstra's algorithm will favor edges with lower weights
+      * Precompute, the driver's ETA using a graph fastest path algorithm.
+      * Now we need to factor traffic data into the calculations.
+        * Uber used to rely on historical data in order to determine traffic and factor it into the ETA situation.
+        * Look into database, and search for similar situation in the past to determine ETA calculation
+        * Uber uses an algorithm based on Djikstra's algorithm (or A*) and calculate ETA's using those.
+      * **Solution to solving ETA problem:**
+        1) Relying on historical data for ETA
+        2) Splitting city into smaller parts & using a graph algorithm.
+  * Overall Idea:
+    * Mapping / and add own graph logic to figure out core problems (routing, customer / driver routing / ETA estimation).
+
     
     
   
