@@ -15,4 +15,20 @@
 ## Service Worker Lifecycle
 * Service workers have a lifecylce that is completely different that that of the webpage.
 * First, to install a service worker, it miust be registered which is done in the webpages / applications JavaScript.
-* Normally during the install, we want to cache static assets, in order to make them available offline later. 
+* Normally during the install, we want to cache static assets, in order to make them available offline later.
+* Once a service worker is in control, it will be in one of two states: either the service worker will be terminated to save memory, or it will handle fetch and message events that occur when a network request or message is made from your page.
+* Simple service worker registration script:
+    ```js
+    if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+  ```
+* 
