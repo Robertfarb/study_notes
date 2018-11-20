@@ -1,4 +1,4 @@
-#JavaScript  
+# JavaScript  
 * [Tricky JS Closure Questions](#tricky-js-closure-questions)
 * [Prototype](#prototype)
 * [Prototypal Inheritance](#prototypal-inheritance-review)
