@@ -21,7 +21,7 @@
     ```js
     if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
       }, function(err) {
@@ -31,4 +31,30 @@
     });
   }
   ```
-* 
+* The above code checks to see if the service worker API is available, and if it is, the service worker at /sw.js is registered once the page is loaded. 
+* Once the service worker is registered, we need to install the service worker.
+* The install script lives in the actual sw.js file.
+* Inside an install event listener callback we need to:
+  1) open a cache
+  2) Cache our files
+  3) Confirm whether all the required assets are cached or not
+* Example service worker install script:
+  ```js
+  var CACHE_NAME = 'my-site-cache-v1';
+var urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
+];
+
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+```
