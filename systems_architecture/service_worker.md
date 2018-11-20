@@ -1,6 +1,7 @@
 # Service Worker
 * [Service Worker Overview](#service-worker-overview)
 * [Service Worker Lifecycle](#service-worker-lifecycle)
+* [Post Requests with a Service Worker](#post-requests-with-a-service-worker)
 
 ## Service Worker Overview
 * A service worker is a JS script that the browser runs in the background, separate from a webpage. It opens the door to features that don't need a webpage or user interaction.
@@ -58,3 +59,25 @@
     );
   });
   ```
+## Post Requests with a Service Worker
+* With form data, we can intercept the fetch event and read the form data in a similar way as below and then save the data in indexedDB.
+  ```js
+  self.addEventListener('fetch', function(event) {
+        if(event.request.method === "POST"){
+          var newObj = {};
+
+                event.request.formData().then(formData => {
+
+                  for(var pair of formData.entries()) {
+                    var key = pair[0];
+                    var value =  pair[1];
+                    newObj[key] = value;
+                  }
+
+                }).then( ...save object in indexedDB... )
+        }
+  })
+  ```
+  1) We save that request to the user’s browser using IndexeDB
+  2) With the help of Background Sync (which only works on chrome 49 & up), once the user’s browser is back online we detect it.
+  3) At this point we then retrieve our POST request from the IndexedB and send it on its merry way to the server.
