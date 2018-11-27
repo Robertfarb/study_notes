@@ -23,8 +23,9 @@
     * executed immediately before removing component from the DOM
 
 ## Imperative v Declarative
-    * Imperative is updating changes by creating and calling functions that are on a component.
-    * Declaratively updating the compnonent is by using this.setState({newState: 1});
-    * 
-    
+* Imperative is updating changes by creating and calling functions that are on a component.
+* Declaratively updating the compnonent is by using this.setState({newState: 1});
+* Imperatively changing parts of a component would be updating the component, not using the state, or any lifecycle hooks. (This is not the react way)
+* Declaratively updating state, allows for easier debugging, and allows thd react diffing algorithm to determine what aspects of the DOM need to be updated.
+* Imperative method in react (Calling this.setState), and then everything else gets to be declarative
 
