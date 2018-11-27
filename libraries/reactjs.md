@@ -28,4 +28,9 @@
 * Imperatively changing parts of a component would be updating the component, not using the state, or any lifecycle hooks. (This is not the react way)
 * Declaratively updating state, allows for easier debugging, and allows thd react diffing algorithm to determine what aspects of the DOM need to be updated.
 * Imperative method in react (Calling this.setState), and then everything else gets to be declarative
+* When we make things `Declarative`, we get to compose them together...
+    * From react we get ReactDOM.render which know's how to take a div from React.Element
+    * ReactDOMRender know's how to change a node's classname... (classList.add / remove)
+    * We get to declaratively compose our UI and offload all of the DOM updates to reactDOMRender.
+
 
