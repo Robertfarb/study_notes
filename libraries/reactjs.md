@@ -23,6 +23,8 @@
     * executed immediately before removing component from the DOM
 
 ## Imperative v Declarative
+    * Imperative is updating changes by creating and calling functions that are on a component.
+    * Declaratively updating the compnonent is by using this.setState({newState: 1});
     * 
     
 
