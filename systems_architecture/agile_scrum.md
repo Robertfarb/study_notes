@@ -26,6 +26,5 @@
   * We don't want to change the time of the originally commited sprint
   * Fixed sprints at a sustainable pace
   * There are daily standup / scrum meetings that take about 15 minutes where you update the team on your daily completions, what you have to do for the day, and any shortcomings, or issues that you're having
-* 
 
 
