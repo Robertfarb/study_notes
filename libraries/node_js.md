@@ -1,5 +1,10 @@
 ## Node.js
-
+* Node.js makes building scalable network programs easy. Some advantages include: 
+  * Generally fast
+  * Almost never blocks
+  * Offers a unified language and datatype
+  * Everything is Asynch
+  * Yields great concurrence
 * What is an error-first callback?
   * Error-first callbacks are used to pass errors and data as well. You have to pass the error as the first parameter, and it has to be checked to see if something went wrong. Additional arguments are used to pass data.
 * How can you avoid callback hell?
@@ -26,3 +31,5 @@
 * What is a stub?
   * Stubs are functions/programs that simulate the behaviors of components/modules. Stubs provide canned answers to function calls made during test cases.
 * If you have to debug a huge codebase, and you don't know which Promise can potentially hide an issue, you can use the `unhandledRejection` hook. It will print out all unhandled Promise rejections.
+* Explain Callbacks in Node.js
+  * A callback function is called at the completion of a given task. This allows code to be run in the meantime and prevents any blocking. Being an async platform, Node.js heavily relies on Callbacks. All APIS of Node are written to support callbacks. 
