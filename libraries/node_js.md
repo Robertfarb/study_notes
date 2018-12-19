@@ -25,3 +25,4 @@
   * Use 'Strict'
 * What is a stub?
   * Stubs are functions/programs that simulate the behaviors of components/modules. Stubs provide canned answers to function calls made during test cases.
+* If you have to debug a huge codebase, and you don't know which Promise can potentially hide an issue, you can use the `unhandledRejection` hook. It will print out all unhandled Promise rejections.
