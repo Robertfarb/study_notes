@@ -34,3 +34,13 @@
     callback(null, response);
   }
   ```
+* Serverless.yml holds all of the function configuration
+  * service: lambda-test
+  * provider:
+    * name: aws
+    * runtime: nodejs4.3
+  * events:
+    - http:
+      path: users/create
+      method: get
+    - s3: ${env:BUCKET}
