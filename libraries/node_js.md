@@ -7,3 +7,21 @@
   * Control flow library like async
   * Use `promises`
   * use async/await
+* What are promises?
+  * Promises are a concurrency primitive, first described in the 80s. Now they are part of most modern programming languages to make your life easier. Promises can help you better handle async operations.
+  * e.g:
+    ```js
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve('result')
+        }, 100)
+      })
+      .then(console.log)
+      .catch(console.error)
+    ```
+* What tools can be used to ensure consistent style?
+  * ESLint
+  * Standard
+  * Use 'Strict'
+* What is a stub?
+  * Stubs are functions/programs that simulate the behaviors of components/modules. Stubs provide canned answers to function calls made during test cases.
