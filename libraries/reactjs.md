@@ -34,3 +34,7 @@
     * We get to declaratively compose our UI and offload all of the DOM updates to reactDOMRender.
 
 
+## Stateless functional components
+
+
+
