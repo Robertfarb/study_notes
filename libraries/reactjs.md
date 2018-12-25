@@ -35,6 +35,13 @@
 
 
 ## Stateless functional components
-
-
-
+* Stateless functional components are React components that do not have any internal state
+* They simply exist to render content to the screen and do not need to extend from React.Component
+* e.g.:
+    ```js
+    const List = ({ items }) => (
+      <ul className="list">
+        {items.map(item => <ListItem item={item} />)}
+      </ul>
+    );
+    ```
