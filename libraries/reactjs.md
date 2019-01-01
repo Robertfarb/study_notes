@@ -8,7 +8,7 @@
 2) render
 3) `componentDidMount`
     * This method is run immediately after the initial rendering
-4) `s`  
+4) `componentWillReceiveProps`  
     * This will be executed as soon as a component receives new props
     * e.g.: A component's state changes, or the component receives new props
 5) `shouldComponentUpdate`
