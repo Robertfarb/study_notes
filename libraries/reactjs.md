@@ -48,3 +48,5 @@
 * Essentially stateless components are functions that return an HTML element and these components usually take in props that will contain the data to render to the screen.
 
 ## Important Lifecycle Methods
+* see above
+* best place to make API calls: componentDidMount()
