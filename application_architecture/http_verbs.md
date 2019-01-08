@@ -21,3 +21,4 @@
 ### `DELETE`:
   * `DELETE` is easy to understand and is used to **delete** a resource identified by a URI
   * **URI**: Uniform resource identifier
+  * DELETE is most often used to delete resources such as user, product from inventory, or message from a chat database.
