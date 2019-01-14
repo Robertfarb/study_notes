@@ -13,3 +13,13 @@ function (n) {
     print(n-1); 
 } 
 '''
+
+```js
+function recursiveSum(num) {
+  if (num === 0) return;
+  let sum = 0;
+
+  sum += num;
+  recursiveSum(num - 1);
+}
+```
